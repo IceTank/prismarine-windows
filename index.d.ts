@@ -209,9 +209,11 @@ export interface WindowsExports {
     windows: {[key in WindowName]: WindowInfo};
 }
 
-export declare function loader(mcVersion: string): WindowsExports;
+declare module 'prismarine-windows' {
+    declare function loader(mcVersion: string): WindowsExports;
 
-export default loader;
+    export = loader
+}
 
 export type WindowName = 
     'minecraft:inventory' |

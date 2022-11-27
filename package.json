@@ -4,7 +4,8 @@
   "description": "Represent minecraft windows",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint",
+    "mocha_test": "mocha --reporter spec --exit",
+    "test": "npm run lint && npm run mocha_test",
     "lint": "standard",
     "fix": "standard --fix"
   },
@@ -19,6 +20,8 @@
   },
   "devDependencies": {
     "@types/node": "^18.6.4",
+    "mocha": "^10.1.0",
+    "prismarine-windows": "file:.",
     "standard": "^17.0.0"
   },
   "keywords": [
